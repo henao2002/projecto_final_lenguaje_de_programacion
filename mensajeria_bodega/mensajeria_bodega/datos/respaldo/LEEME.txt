@@ -1,0 +1,14 @@
+CARPETA DE RESPALDO DE LA BITÁCORA
+
+Aquí el servidor deja copias automáticas de datos/mensajes.log:
+  - una al ARRANCAR (cómo estaba la bitácora antes del turno), y
+  - otra al APAGAR con Ctrl + C (con todo lo del turno).
+
+Cada copia se llama mensajes_AAAAMMDD_HHMMSS.log (fecha y hora de la copia).
+Se conservan las 20 más recientes; las más viejas se borran solas.
+
+Para RESTAURAR: con el servidor apagado, copie el respaldo que quiera
+sobre datos/mensajes.log y vuelva a encender el servidor.
+
+También se puede sacar el reporte de un respaldo:
+  python -m mensajeria.analisis.reporte datos/respaldo/mensajes_20261020_180000.log
